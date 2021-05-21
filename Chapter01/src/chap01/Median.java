@@ -3,7 +3,7 @@ package chap01;
 import java.util.Scanner;
 
 public class Median {
-	static int med3(int a, int b, int c) {
+	private static int med3(int a, int b, int c) {
 		if(a >= b)
 			if(b >= c)
 				return b;
@@ -19,7 +19,7 @@ public class Median {
 			return b;
 	}
 	
-	static int med3_2(int a, int b, int c) { // med3 메소드에 비해 효율이 떨어진다 -> 
+	private static int med3_2(int a, int b, int c) { // med3 메소드에 비해 효율이 떨어진다 -> 
 		if((a<=b && a>=c) || (a<=c && a>=b))
 			return a;
 		else if ((a>b && b<c) || (a<b && c>b))

@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class SumFor {
 	
-	static void For(int n) {
+	private static void For(int n) {
 		int sum = 0;
 		for(int i=1; i<= n; i++) {
 			sum += i;
@@ -15,13 +15,13 @@ public class SumFor {
 		}
 	}
 	
-	static String Gauss(int n) {
+	private static String Gauss(int n) {
 		int sum = 0;
 		sum = (1 + n) * (n/2);
 		return "(1+"+ n +")*"+ n/2 + " = " + sum;
 	}
 	
-	static int sumof(int a, int b) {
+	private static int sumof(int a, int b) {
 		int sum = 0;
 		for(int i=a; i<=b; i++) {
 			sum += i;
