@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Multi99Table {
 // 이중루프를 사용하는 알고리즘의 예로 곱셈표를 출력하는 프로그램
-	static void squere(int n) {
+	static void square(int n) {
 		for(int i=0; i<n; i++) {
 			for(int j=0; j<n; j++) {
 				System.out.print("* ");
@@ -12,7 +12,6 @@ public class Multi99Table {
 			System.out.println();
 		}
 	}
-	
 	
 	public static void main(String[] args) {
 		System.out.println("------------곱셈표------------");
@@ -76,9 +75,8 @@ public class Multi99Table {
 		System.out.println("사각형을 출력합니다.");
 		System.out.print("단 수 : ");
 		int n = sc.nextInt();
-		squere(n);
+		square(n);
 	}
-	
 	
 
 }
