@@ -3,16 +3,16 @@ package chap02;
 import java.util.Scanner;
 
 public class ReverseArray {
-	// ¹è¿­ ¿ä¼Ò¿¡ °ªÀ» ÀĞ¾î µé¿© ¿ª¼øÀ¸·Î Á¤·Ä.
+	// ë°°ì—´ ìš”ì†Œì— ê°’ì„ ì½ì–´ ë“¤ì—¬ ì—­ìˆœìœ¼ë¡œ ì •ë ¬.
 	
 	private static void swap(int[] a, int idx1, int idx2) {
-		// ¹è¿­ ¿ä¼Ò a[idx1]°ú a[idx2]ÀÇ °ªÀ» ¹Ù²Ş
+		// ë°°ì—´ ìš”ì†Œ a[idx1]ê³¼ a[idx2]ì˜ ê°’ì„ ë°”ê¿ˆ
 		int t = a[idx1];
 		a[idx1] = a[idx2];
 		a[idx2] = t;
 	}
 
-	// ¹è¿­ aÀÇ ¿ä¼Ò¸¦ ¿ª¼øÀ¸·Î Á¤·Ä
+	// ë°°ì—´ aì˜ ìš”ì†Œë¥¼ ì—­ìˆœìœ¼ë¡œ ì •ë ¬
 	static void reverse(int[] a) {
 		for(int i=0; i<a.length/2; i++) 
 			swap(a, i, a.length-i-1);
@@ -22,14 +22,14 @@ public class ReverseArray {
 		for(int i=0; i<a.length/2; i++) {
 			int idx1 = i;
 			int idx2 = a.length-i-1;
-			System.out.println("a["+ idx1 +"]°ú(¿Í) a["+ idx2 +"]¸¦ ±³È¯ÇÕ´Ï´Ù.");
+			System.out.println("a["+ idx1 +"]ê³¼(ì™€) a["+ idx2 +"]ë¥¼ êµí™˜í•©ë‹ˆë‹¤.");
 			swap(a, idx1, idx2);
 			for(int j=0; j<a.length; j++) {
 				System.out.print(a[j]+" ");
 				}
 			System.out.println();
 		}
-		System.out.println("¿ª¼ø Á¤·ÄÀ» ¸¶ÃÆ½À´Ï´Ù.");
+		System.out.println("ì—­ìˆœ ì •ë ¬ì„ ë§ˆì³¤ìŠµë‹ˆë‹¤.");
 	}
 	
 	private static int sumOf(int[] a) {
@@ -46,27 +46,27 @@ public class ReverseArray {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("¿ä¼Ú¼ö : ");
-		int num = sc.nextInt();			// ¿ä¼Ú¼ö
+		System.out.print("ìš”ì†Ÿìˆ˜ : ");
+		int num = sc.nextInt();			// ìš”ì†Ÿìˆ˜
 		
-		int[] x = new int[num];			// ¿ä¼Ú¼ö°¡ numÀÎ ¹è¿­
+		int[] x = new int[num];			// ìš”ì†Ÿìˆ˜ê°€ numì¸ ë°°ì—´
 		
 		for(int i=0; i<num; i++) {
 			System.out.print("x[" + i + "] : ");
 			x[i] = sc.nextInt();
 		}
 		
-		reverse(x);						// ¹è¿­ÀÇ ¿ä¼Ò¸¦ ¿ª¼øÀ¸·Î Á¤·Ä
+		reverse(x);						// ë°°ì—´ì˜ ìš”ì†Œë¥¼ ì—­ìˆœìœ¼ë¡œ ì •ë ¬
 		
-		System.out.println("¿ä¼Ò¸¦ ¿ª¼øÀ¸·Î Á¤·ÄÇß½À´Ï´Ù.");
+		System.out.println("ìš”ì†Œë¥¼ ì—­ìˆœìœ¼ë¡œ ì •ë ¬í–ˆìŠµë‹ˆë‹¤.");
 		for(int i=0; i<num; i++) {
 			System.out.println("x[" + i + "] : "+x[i]);
 		}
 		System.out.println();
 		
 		
-		// Q2. ¹è¿­ ¿ä¼Ò¸¦ ¿ª¼øÀ¸·Î Á¤·ÄÇÏ´Â °úÁ¤À» ÇÏ³ªÇÏ³ª ³ªÅ¸³»´Â ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ¶ó.
-		System.out.print("¿ä¼Ú¼ö : ");
+		// Q2. ë°°ì—´ ìš”ì†Œë¥¼ ì—­ìˆœìœ¼ë¡œ ì •ë ¬í•˜ëŠ” ê³¼ì •ì„ í•˜ë‚˜í•˜ë‚˜ ë‚˜íƒ€ë‚´ëŠ” í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ë¼.
+		System.out.print("ìš”ì†Ÿìˆ˜ : ");
 		int n = sc.nextInt();
 		int[] a = new int[n];
 		
@@ -75,13 +75,8 @@ public class ReverseArray {
 		}
 		reverseProcess(a);
 		
-		// Q3. ¹è¿­ aÀÇ ¸ğµç ¿ä¼ÒÀÇ ÇÕ°è¸¦ ±¸ÇÏ¿© ¹İÈ¯ÇÏ´Â ¸Ş¼­µå¸¦ ÀÛ¼ºÇÏ¶ó.
+		// Q3. ë°°ì—´ aì˜ ëª¨ë“  ìš”ì†Œì˜ í•©ê³„ë¥¼ êµ¬í•˜ì—¬ ë°˜í™˜í•˜ëŠ” ë©”ì„œë“œë¥¼ ì‘ì„±í•˜ë¼.
 		System.out.println(sumOf(a));
 		
-		
-		
 	}
-	
-	
-	
 }
