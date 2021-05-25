@@ -1,13 +1,13 @@
 package chap02;
 
 public class CloneArray {
-// ¹è¿­À» º¹Á¦ÇÕ´Ï´Ù.
+// ë°°ì—´ì„ ë³µì œí•©ë‹ˆë‹¤.
 	public static void main(String[] args) {
 		int[] a = {1, 2, 3, 4, 5};
-		int[] b = a.clone();		// b´Â aÀÇ º¹Á¦¸¦ ÂüÁ¶
+		int[] b = a.clone();		// bëŠ” aì˜ ë³µì œë¥¼ ì°¸ì¡°
 		
 		
-		b[3] = 0; 					// ÇÑ ¿ä¼Ò¿¡¸¸ 0À» ´ëÀÔ
+		b[3] = 0; 					// í•œ ìš”ì†Œì—ë§Œ 0ì„ ëŒ€ì…
 		
 		System.out.print("a =");
 		for(int i=0; i<a.length; i++) {
