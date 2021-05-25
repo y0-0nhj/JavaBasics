@@ -1,12 +1,13 @@
 package chap02;
 
 public class IntArrayInit {
-// 备己 磊丰屈捞 int屈牢 硅凯(备己 夸稼荐绰 5 : 硅凯 檬扁磊俊 狼秦 积己)
+// 甑劚 鞛愲順曥澊 int順曥澑 氚办棿(甑劚 鞖旍啛靾橂姅 5 : 氚办棿 齑堦赴鞛愳棎 鞚橅暣 靸濎劚)
 	public static void main(String[] args) {
-		int[] a = {1, 2, 3, 4 ,5};	// 硅凯 檬扁磊俊 狼秦 积己
+		int[] a = {1, 2, 3, 4 ,5};	// 氚办棿 齑堦赴鞛愳棎 鞚橅暣 靸濎劚
 		
 		for(int i=0; i<a.length; i++) {
 			System.out.println("a[" + i + "] = "+ a[i]);
+		
 		}
 	}
 }
