@@ -91,6 +91,7 @@ public class ArrayEqual {
 		System.out.print("b[i] = ");
 		for(int i=0; i<b.length; i++) {
 			System.out.print(b[i] + " ");
+			
 		}
 		
 	}
