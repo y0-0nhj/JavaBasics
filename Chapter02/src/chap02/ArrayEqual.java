@@ -3,7 +3,7 @@ package chap02;
 import java.util.Scanner;
 
 public class ArrayEqual {
-// µÎ ¹è¿­ÀÌ °°Àº°¡¸¦ ÆÇ´Ü
+// ë‘ ë°°ì—´ì´ ê°™ì€ê°€ë¥¼ íŒë‹¨
 
 	private static boolean equals(int[] a, int[] b) {
 		if(a.length != b.length)
@@ -12,7 +12,6 @@ public class ArrayEqual {
 		for(int i=0; i<a.length; i++) {
 			if(a[i] != b[i]) return false;
 		}
-		
 		return true;
 	}
 	
@@ -41,33 +40,33 @@ public class ArrayEqual {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("¹è¿­ aÀÇ ¿ä¼Ú¼ö : "); 		// ¹è¿­ aÀÇ ¿ä¼Ú¼ö
+		System.out.print("ë°°ì—´ aì˜ ìš”ì†Ÿìˆ˜ : "); 		// ë°°ì—´ aì˜ ìš”ì†Ÿìˆ˜
 		int na = sc.nextInt();
 		
-		int[] a = new int[na];					// ¿ä¼Ú¼ö°¡ naÀÎ ¹è¿­
+		int[] a = new int[na];					// ìš”ì†Ÿìˆ˜ê°€ naì¸ ë°°ì—´
 		
 		for(int i=0; i<na; i++) {
 			System.out.print("a[i] : ");		
 			a[i] = sc.nextInt();
 		}
 		
-		System.out.print("¹è¿­ bÀÇ ¿ä¼Ú¼ö : ");		// ¹è¿­ bÀÇ ¿ä¼Ú¼ö
+		System.out.print("ë°°ì—´ bì˜ ìš”ì†Ÿìˆ˜ : ");		// ë°°ì—´ bì˜ ìš”ì†Ÿìˆ˜
 		int nb = sc.nextInt();
 		
-		int[] b = new int[nb];					// ¿ä¼Ú¼ö°¡ nbÀÎ ¹è¿­
+		int[] b = new int[nb];					// ìš”ì†Ÿìˆ˜ê°€ nbì¸ ë°°ì—´
 		
 		for(int i=0; i<b.length; i++) {
 			System.out.print("b[i] : ");
 			b[i] = sc.nextInt();
 		}
 		
-		System.out.println("¹è¿­ a¿Í b´Â " +
-				(equals(a,b) ? "°°½À´Ï´Ù."
-							: "°°Áö ¾Ê½À´Ï´Ù."));
+		System.out.println("ë°°ì—´ aì™€ bëŠ” " +
+				(equals(a,b) ? "ê°™ìŠµë‹ˆë‹¤."
+							: "ê°™ì§€ ì•ŠìŠµë‹ˆë‹¤."));
 		
 		
-		// Q4.¹è¿­ bÀÇ ¸ğµç ¿ä¼Ò¸¦ ¹è¿­ a¿¡ º¹»çÇÏ´Â ¸Ş¼­µå copy¸¦ ÀÛ¼ºÇÏ¶ó.
-		System.out.println("--- copy ¸Ş¼Òµå ½ÇÇà ---");
+		// Q4.ë°°ì—´ bì˜ ëª¨ë“  ìš”ì†Œë¥¼ ë°°ì—´ aì— ë³µì‚¬í•˜ëŠ” ë©”ì„œë“œ copyë¥¼ ì‘ì„±í•˜ë¼.
+		System.out.println("--- copy ë©”ì†Œë“œ ì‹¤í–‰ ---");
 		copy(a,b);
 		System.out.print("a[i] = ");
 		for(int i=0; i<a.length; i++) {
@@ -80,8 +79,8 @@ public class ArrayEqual {
 		}
 		System.out.println();
 		
-		// Q5. ¹è¿­ bÀÇ ¸ğµç ¿ä¼Ò¸¦ ¹è¿­ a¿¡ ¿ª¼øÀ¸·Î º¹»çÇÏ´Â ¸Ş¼­µå rcopy¸¦ ÀÛ¼ºÇÏ¶ó.
-		System.out.println("--- rcopy ¸Ş¼Òµå ½ÇÇà ---");
+		// Q5. ë°°ì—´ bì˜ ëª¨ë“  ìš”ì†Œë¥¼ ë°°ì—´ aì— ì—­ìˆœìœ¼ë¡œ ë³µì‚¬í•˜ëŠ” ë©”ì„œë“œ rcopyë¥¼ ì‘ì„±í•˜ë¼.
+		System.out.println("--- rcopy ë©”ì†Œë“œ ì‹¤í–‰ ---");
 		rcopy(a,b);
 		System.out.print("a[i] = ");
 		for(int i=0; i<a.length; i++) {
@@ -93,7 +92,7 @@ public class ArrayEqual {
 			System.out.print(b[i] + " ");
 			
 		}
-		
 	}
-
 }
+
+

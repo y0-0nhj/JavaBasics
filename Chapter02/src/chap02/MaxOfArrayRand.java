@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class MaxOfArrayRand {
-	// ¹è¿­ÀÇ ÃÖ´ñ°ªÀ» ±¸ÇÏ¿© ¹İÈ¯ÇÕ´Ï´Ù.
+	// ë°°ì—´ì˜ ìµœëŒ“ê°’ì„ êµ¬í•˜ì—¬ ë°˜í™˜í•©ë‹ˆë‹¤.
 	private static int maxOf(int[] a) {
 		int max = a[0];
 		for(int i=0; i<a.length; i++) {
@@ -16,35 +16,34 @@ public class MaxOfArrayRand {
 		Random rand = new Random();
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("Å°ÀÇ ÃÖ´ñ°ªÀ» ±¸ÇÕ´Ï´Ù.");
-		System.out.print("»ç¶÷ ¼ö: ");
-		int num = sc.nextInt();			// ¹è¿­ÀÇ ¿ä¼Ú¼ö¸¦ ÀÔ·Â ¹ŞÀ½.
+		System.out.println("í‚¤ì˜ ìµœëŒ“ê°’ì„ êµ¬í•©ë‹ˆë‹¤.");
+		System.out.print("ì‚¬ëŒ ìˆ˜: ");
+		int num = sc.nextInt();			// ë°°ì—´ì˜ ìš”ì†Ÿìˆ˜ë¥¼ ì…ë ¥ ë°›ìŒ.
 		
-		int[] height = new int[num];	// ¿ä¼Ú¼ö°¡ numÀÎ ¹è¿­À» »ı¼º
+		int[] height = new int[num];	// ìš”ì†Ÿìˆ˜ê°€ numì¸ ë°°ì—´ì„ ìƒì„±
 		
-		System.out.println("Å° °ªÀº ¾Æ·¡¿Í °°½À´Ï´Ù.");
+		System.out.println("í‚¤ ê°’ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.");
 		for(int i=0; i<height.length; i++) {
 			height[i] = 100 + rand.nextInt(90);
 			System.out.println("height[" + i + "] : " + height[i]);
 			
 		}
-		System.out.println("»ç¶÷µé Áß °¡Àå Å« Å°´Â " + maxOf(height) + "ÀÔ´Ï´Ù.");
+		System.out.println("ì‚¬ëŒë“¤ ì¤‘ ê°€ì¥ í° í‚¤ëŠ” " + maxOf(height) + "ì…ë‹ˆë‹¤.");
 	
-		// Q1. Å°»Ó¸¸ ¾Æ´Ï¶ó »ç¶÷ ¼öµµ ³­¼ö·Î »ı¼ºÇÏµµ·Ï ÇÁ·Î±×·¥À» ÀÛ¼ºÇÏ¶ó.
-		System.out.println("\n---- »ç¶÷ ¼ö¸¦ ³­¼ö·Î ¼³Á¤ ----");
+		// Q1. í‚¤ë¿ë§Œ ì•„ë‹ˆë¼ ì‚¬ëŒ ìˆ˜ë„ ë‚œìˆ˜ë¡œ ìƒì„±í•˜ë„ë¡ í”„ë¡œê·¸ë¨ì„ ì‘ì„±í•˜ë¼.
+		System.out.println("\n---- ì‚¬ëŒ ìˆ˜ë¥¼ ë‚œìˆ˜ë¡œ ì„¤ì • ----");
 		Random n = new Random();
-		int num2 = 1 + n.nextInt(30);		// 1ºÎÅÍ 30±îÁöÀÇ »ç¶÷ ¼ö¸¦ ³ªÅ¸³»´Â ³­¼ö
-		System.out.println("»ç¶÷ ¼ö: " + num2);
-		int[] height2 = new int[num2];		// ¿ä¼Ú¼ö°¡ num2ÀÎ ¹è¿­À» »ı¼º
+		int num2 = 1 + n.nextInt(30);		// 1ë¶€í„° 30ê¹Œì§€ì˜ ì‚¬ëŒ ìˆ˜ë¥¼ ë‚˜íƒ€ë‚´ëŠ” ë‚œìˆ˜
+		System.out.println("ì‚¬ëŒ ìˆ˜: " + num2);
+		int[] height2 = new int[num2];		// ìš”ì†Ÿìˆ˜ê°€ num2ì¸ ë°°ì—´ì„ ìƒì„±
 		
-		System.out.println("Å° °ªÀº ¾Æ·¡¿Í °°½À´Ï´Ù.");
+		System.out.println("í‚¤ ê°’ì€ ì•„ë˜ì™€ ê°™ìŠµë‹ˆë‹¤.");
 		for(int i=0; i<height2.length; i++) {
 			height2[i] = 100 + rand.nextInt(90);
 			System.out.println("height[" + i + "] : " + height2[i]);
 			
 		}
-		System.out.println("»ç¶÷µé Áß °¡Àå Å« Å°´Â " + maxOf(height2) + "ÀÔ´Ï´Ù.");
+		System.out.println("ì‚¬ëŒë“¤ ì¤‘ ê°€ì¥ í° í‚¤ëŠ” " + maxOf(height2) + "ì…ë‹ˆë‹¤.");
 
 	}
-	
 }
