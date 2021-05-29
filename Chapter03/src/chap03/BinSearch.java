@@ -53,7 +53,9 @@ public class BinSearch {
 		else
 			System.out.println(key+"은(는) x["+idx+"]에 있습니다.");
 		
-
 		
 	}
+
+		
 }
+
