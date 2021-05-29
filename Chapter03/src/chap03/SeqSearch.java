@@ -67,13 +67,6 @@ public class SeqSearch {
 		System.out.println("\n배열 idx의 개수 : "+searchIdx(x, num, key, idx2));
 	
 		
-		// Q4. 
-
 	}
-	
-
-	
-	
-	
 	
 }
