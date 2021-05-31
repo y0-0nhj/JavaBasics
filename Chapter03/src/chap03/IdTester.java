@@ -29,6 +29,7 @@ public class IdTester {
 		System.out.println("부여한 아이디의 개수 : " + Id.getCnt());
 		
 		// 인스턴스 메서드 호출 시 : 클래스형 변수 이름.메서드 이름
+		
 		// 클래스 메서드 호출 시 : 클래스 이름.메서드 이름
 	}
 }
