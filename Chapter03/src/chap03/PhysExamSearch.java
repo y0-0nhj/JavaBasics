@@ -25,16 +25,28 @@ public class PhysExamSearch {
 			return name + " " + height + " " + vision;
 		}
 		
-		// 오름차순으로 정렬하기 위한 compator
+		// 오름차순으로 정렬하기 위한 comparator
 		public static final Comparator<PhyscData> HEIGHT_ORDER 
 		= new HeightOrderComparator();
 		
-		private static class HeightOrderComparator implements Comparator<PhyscData>{
+		private static class HeightOrderComparator implements Comparator<PhyscData> {
 			public int compare(PhyscData d1, PhyscData d2) {
 				return  (d1.height>d2.height) ?  1 :
 						(d1.height<d2.height) ? -1 : 0;
 			}
 		}
+		
+		// 내림차순으로 정렬하기 위한 comparator
+		public static final Comparator<PhyscData> VISION_ORDER
+		= new VisionOrderComparator();
+		
+		private static class VisionOrderComparator implements Comparator<PhyscData> {
+			public int compare(PhyscData d1, PhyscData d2) {
+				return  (d1.vision>d2.vision) ?  1 :
+						(d1.vision<d2.vision) ? -1 : 0;
+			}
+		}
+		
 	}
 	
 	public static void main(String [] args) {
@@ -62,7 +74,13 @@ public class PhysExamSearch {
 			System.out.println("x["+idx+"]에 있습니다.");
 			System.out.println("찾은 데이터 : " + x[idx]);
 		}
+		
+		// Q7. 시력에 대한 내림차순 정렬의 신체검사 데이터에서 특정 시력을 가진 사람을 검색하는 프로그램을 작성하라.
+		
+		
 	}
+	
+
 	
 
 }
