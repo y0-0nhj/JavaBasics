@@ -2,6 +2,7 @@ package chap04;
 
 import java.util.Scanner;
 
+// Q4. 큐를 구현하는 클래스를 만드세요.
 public class IntAryQueue {
 	private int max;	// 큐 용량
 	private int num;	// 현재 데이터 수
