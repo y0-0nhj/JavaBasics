@@ -1,7 +1,5 @@
 package chap04;
 
-import chap04.IntStack.EmptyIntStackException;
-
 // Q2. 임의의 객체형 데이터를 쌓을 수 있는 제네ㅔ릭 스택 클래스 Gstack<E>를 작성하라.
 public class Gstack<E> {
 	private int max;	// 스택 용량
